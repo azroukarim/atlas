@@ -818,9 +818,9 @@
     transition: all 0.3s ease;
 }
 
-.image-swiper .swiper-slide:not(.swiper-slide-active) {
-    opacity: 1;
-    transform: scale(1);
+.image-swiper .swiper-slide {
+    opacity: 1 !important;
+    transform: scale(1) !important;
 }
 
 .image-swiper .swiper-slide-active .image-card {
@@ -841,6 +841,7 @@
     overflow: visible;
     position: relative;
     z-index: 1;
+    opacity: 1;
 }
 
   .image-card:hover {
@@ -1460,71 +1461,117 @@
     <div class="compatibility-note">⚡ One subscription — All devices — No limits</div>
   </div>
 
-  <div class="plans">
-    <div class="plan">
-      <div class="plan-duration">1 <span>Month</span></div>
-      <div class="plan-price">$10 <sub>USD</sub></div>
-      <div class="save-badge">No commitment</div>
-      <div class="price-per-month">Monthly: <strong>$10/month</strong></div>
-      <div class="plan-divider"></div>
-      <ul class="plan-features">
-        <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
-        <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
-        <li><span class="feat-check">✓</span> All Sports Channels</li>
-        <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
-      </ul>
-      <button class="plan-btn" onclick="openOrderModal('1 Month', 10)">Select Plan</button>
-    </div>
-    <div class="plan">
-      <div class="plan-duration">3 <span>Months</span></div>
-      <div class="plan-price">$20 <sub>USD</sub></div>
-      <div class="save-badge">Save 7%</div>
-      <div class="price-per-month">Monthly: <strong>$6.7/month</strong></div>
-      <div class="plan-divider"></div>
-      <ul class="plan-features">
-        <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
-        <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
-        <li><span class="feat-check">✓</span> All Sports Channels</li>
-        <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
-        <li><span class="feat-check">✓</span> All Devices Support</li>
-      </ul>
-      <button class="plan-btn" onclick="openOrderModal('3 Months', 20)">Select Plan</button>
-    </div>
-    <div class="plan popular">
-      <div class="popular-badge">🔥 Best Value</div>
-      <div class="plan-duration">6 <span>Months</span></div>
-      <div class="plan-price">$35 <sub>USD</sub></div>
-      <div class="save-badge">Save 17%</div>
-      <div class="price-per-month">Monthly: <strong>$5.8/month</strong></div>
-      <div class="plan-divider"></div>
-      <ul class="plan-features">
-        <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
-        <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
-        <li><span class="feat-check">✓</span> All Sports Channels</li>
-        <li><span class="feat-check">✓</span> Arabic & International</li>
-        <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
-        <li><span class="feat-check">✓</span> All Devices Support</li>
-        <li><span class="feat-check">✓</span> Bonus: 1 month Free</li>
-      </ul>
-      <button class="plan-btn" onclick="openOrderModal('6 Months', 35)">Select Plan</button>
-    </div>
-    <div class="plan">
-      <div class="plan-duration">12 <span>Months</span></div>
-      <div class="plan-price">$59 <sub>USD</sub></div>
-      <div class="save-badge">Save 27%</div>
-      <div class="price-per-month">Monthly: <strong>$4.9/month</strong></div>
-      <div class="plan-divider"></div>
-      <ul class="plan-features">
-        <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
-        <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
-        <li><span class="feat-check">✓</span> All Sports Channels</li>
-        <li><span class="feat-check">✓</span> Arabic & International</li>
-        <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
-        <li><span class="feat-check">✓</span> All Devices Support</li>
-        <li><span class="feat-check">✓</span> Priority Support</li>
-      </ul>
-      <button class="plan-btn" onclick="openOrderModal('12 Months', 59)">Select Plan</button>
-    </div>
+<div class="plans">
+  <!-- 1 Month -->
+  <div class="plan">
+    <div class="plan-duration">1 <span>Month</span></div>
+    <div class="plan-price">$10 <sub>USD</sub></div>
+    <div class="save-badge">No commitment</div>
+    <div class="price-per-month">Monthly: <strong>$10/month</strong></div>
+    <div class="plan-divider"></div>
+    <ul class="plan-features">
+      <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
+      <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
+      <li><span class="feat-check">✓</span> All Sports Channels</li>
+      <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
+    </ul>
+    <button class="plan-btn" onclick="openOrderModal('1 Month', 10)">Select Plan</button>
+  </div>
+
+  <!-- 3 Months -->
+  <div class="plan">
+    <div class="plan-duration">3 <span>Months</span></div>
+    <div class="plan-price">$20 <sub>USD</sub></div>
+    <div class="save-badge">Save 7%</div>
+    <div class="price-per-month">Monthly: <strong>$6.7/month</strong></div>
+    <div class="plan-divider"></div>
+    <ul class="plan-features">
+      <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
+      <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
+      <li><span class="feat-check">✓</span> All Sports Channels</li>
+      <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
+      <li><span class="feat-check">✓</span> All Devices Support</li>
+    </ul>
+    <button class="plan-btn" onclick="openOrderModal('3 Months', 20)">Select Plan</button>
+  </div>
+
+  <!-- 6 Months (Most Popular) -->
+  <div class="plan popular">
+    <div class="popular-badge">🔥 Best Value</div>
+    <div class="plan-duration">6 <span>Months</span></div>
+    <div class="plan-price">$35 <sub>USD</sub></div>
+    <div class="save-badge">Save 17%</div>
+    <div class="price-per-month">Monthly: <strong>$5.8/month</strong></div>
+    <div class="plan-divider"></div>
+    <ul class="plan-features">
+      <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
+      <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
+      <li><span class="feat-check">✓</span> All Sports Channels</li>
+      <li><span class="feat-check">✓</span> Arabic & International</li>
+      <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
+      <li><span class="feat-check">✓</span> All Devices Support</li>
+      <li><span class="feat-check">✓</span> Bonus: 1 month Free</li>
+    </ul>
+    <button class="plan-btn" onclick="openOrderModal('6 Months', 35)">Select Plan</button>
+  </div>
+
+  <!-- 12 Months -->
+  <div class="plan">
+    <div class="plan-duration">12 <span>Months</span></div>
+    <div class="plan-price">$59 <sub>USD</sub></div>
+    <div class="save-badge">Save 27%</div>
+    <div class="price-per-month">Monthly: <strong>$4.9/month</strong></div>
+    <div class="plan-divider"></div>
+    <ul class="plan-features">
+      <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
+      <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
+      <li><span class="feat-check">✓</span> All Sports Channels</li>
+      <li><span class="feat-check">✓</span> Arabic & International</li>
+      <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
+      <li><span class="feat-check">✓</span> All Devices Support</li>
+      <li><span class="feat-check">✓</span> Priority Support</li>
+    </ul>
+    <button class="plan-btn" onclick="openOrderModal('12 Months', 59)">Select Plan</button>
+  </div>
+
+  <!-- 18 Months -->
+  <div class="plan">
+    <div class="plan-duration">18 <span>Months</span></div>
+    <div class="plan-price">$79 <sub>USD</sub></div>
+    <div class="save-badge">Save 35%</div>
+    <div class="price-per-month">Monthly: <strong>$4.4/month</strong></div>
+    <div class="plan-divider"></div>
+    <ul class="plan-features">
+      <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
+      <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
+      <li><span class="feat-check">✓</span> All Sports Channels</li>
+      <li><span class="feat-check">✓</span> Arabic & International</li>
+      <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
+      <li><span class="feat-check">✓</span> All Devices Support</li>
+      <li><span class="feat-check">✓</span> Bonus: 2 months Free</li>
+      <li><span class="feat-check">✓</span> Priority Support</li>
+    </ul>
+    <button class="plan-btn" onclick="openOrderModal('18 Months', 79)">Select Plan</button>
+  </div>
+
+  <!-- 24 Months -->
+  <div class="plan">
+    <div class="plan-duration">24 <span>Months</span></div>
+    <div class="plan-price">$99 <sub>USD</sub></div>
+    <div class="save-badge">Save 45%</div>
+    <div class="price-per-month">Monthly: <strong>$4.1/month</strong></div>
+    <div class="plan-divider"></div>
+    <ul class="plan-features">
+      <li><span class="feat-check">✓</span> 20,000+ Live Channels</li>
+      <li><span class="feat-check">✓</span> 60,000+ Movies & VOD</li>
+      <li><span class="feat-check">✓</span> All Sports Channels</li>
+      <li><span class="feat-check">✓</span> Arabic & International</li>
+      <li><span class="feat-check">✓</span> 4K / Full HD Support</li>
+      <li><span class="feat-check">✓</span> All Devices Support</li>
+      <li><span class="feat-check">✓</span> Bonus: 3 months Free</li>
+      <li><span class="feat-check">✓</span> VIP Priority Support</li>
+    </ul>
+    <button class="plan-btn" onclick="openOrderModal('24 Months', 99)">Select Plan</button>
   </div>
 </div>
 
@@ -1592,7 +1639,15 @@
         <div class="form-group"><label>Full Name</label><input type="text" id="inp-name" placeholder="John Doe"></div>
         <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" id="inp-phone" placeholder="+212 6XX XXX XXX"></div>
         <div class="form-group full"><label>Email Address</label><input type="email" id="inp-email" placeholder="example@gmail.com"></div>
-        <div class="form-group"><label>Plan</label><select id="inp-plan"><option value="">Select plan...</option><option>1 Month — $10 USD</option><option>3 Months — $20 USD</option><option>6 Months — $35 USD</option><option>12 Months — $59 USD</option></select></div>
+        <div class="form-group"><label>Plan</label><select id="inp-plan">
+  <option value="">Select plan...</option>
+  <option>1 Month — $10 USD</option>
+  <option>3 Months — $20 USD</option>
+  <option>6 Months — $35 USD</option>
+  <option>12 Months — $59 USD</option>
+  <option>18 Months — $79 USD</option>
+  <option>24 Months — $99 USD</option>
+</select></div>
         <div class="form-group"><label>Payment Method</label><select id="inp-payment"><option value="">Select payment method...</option><option>CashPlus</option><option>CIH Bank</option><option>CashExpress</option></select></div>
       </div>
       <button class="form-submit" onclick="submitOrder()">🚀 Send Order via WhatsApp</button>
