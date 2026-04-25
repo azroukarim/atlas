@@ -38,26 +38,18 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   
+  /* خلفية ثابتة للموقع بالكامل */
   body {
+    background: url('https://wallpapercave.com/wp/wp3131729.jpg') center center/cover no-repeat fixed;
     font-family: 'Inter', sans-serif;
-    background: var(--bg-primary);
     color: var(--text-primary);
     overflow-x: hidden;
     position: relative;
   }
   
+  /* إخفاء التدرجات اللونية القديمة لأننا نستخدم صورة */
   body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.05) 0%, transparent 60%);
-    pointer-events: none;
-    z-index: -1;
+    display: none;
   }
 
   /* ========== NAVIGATION ========== */
@@ -198,7 +190,7 @@
     text-align: center;
     padding: 80px 24px 60px;
     overflow: hidden;
-    background: url('https://raw.githubusercontent.com/azroukarim/illustrious-valkyrie-720dca/refs/heads/main/UEFA_1280x720.jpg') center center/cover no-repeat;
+    background: url('https://raw.githubusercontent.com/azroukarim/illustrious-valkyrie-720dca/refs/heads/main/UEFA_1280x720.jpg') center center/cover repeat;
   }
   .hero::before {
     content: '';
@@ -762,11 +754,29 @@
 
   /* ========== IMAGE SLIDER SECTION (بين الخطط وطرق الدفع) ========== */
   .image-slider-section {
-    background: var(--bg-primary);
+    background: url('https://wallpapercave.com/wp/wp3131729.jpg') center center/cover no-repeat fixed;
     padding: 50px 24px;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-  }
+    position: relative;
+}
+
+/* إضافة طبقة داكنة فوق الخلفية لتوضيح النص */
+.image-slider-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.image-slider-section > * {
+    position: relative;
+    z-index: 2;
+}
   .image-slider-container {
     max-width: 1100px;
     margin: 0 auto;
@@ -791,12 +801,34 @@
   .image-swiper {
     width: 100%;
     padding: 10px 0 30px 0;
+    overflow: visible;
   }
-  .image-swiper .swiper-slide {
+    .image-swiper .swiper-slide {
     width: auto;
-    opacity: 1;
-    transform: scale(1);
+    transition: all 0.3s ease;
+    overflow: visible;
+    z-index: 1;
   }
+
+.image-swiper .swiper-slide:hover {
+    z-index: 9999 !important;
+  }
+
+.image-swiper .swiper-slide-active {
+    z-index: 100;
+ }
+.image-swiper .swiper-slide:hover {
+    z-index: 999;
+ }
+  .image-swiper .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.6;
+    transform: scale(0.85);
+  }
+.image-swiper .swiper-slide-active .image-card {
+    transform: scale(1);
+    border-color: var(--yellow);
+    box-shadow: var(--shadow-glow-yellow);
+ }
 .image-card {
     background: var(--bg-card);
     backdrop-filter: blur(8px);
@@ -807,6 +839,8 @@
     transition: all 0.3s ease;
     cursor: pointer;
     overflow: visible;
+    position: relative;
+    z-index: 1;
 }
   .image-card:hover {
     transform: translateY(-5px);
@@ -821,9 +855,11 @@
     margin-bottom: 10px;
     transition: transform 0.3s ease;
   }
-  .image-card:hover img {
-    transform: scale(1.75);
-  }
+.image-card:hover img {
+    transform: scale(1.8);
+    z-index: 99999 !important;
+    position: relative;
+}
   .image-card .image-caption {
     font-size: 12px;
     color: var(--text-secondary);
@@ -965,11 +1001,14 @@
   }
 
   /* ========== FAQ & TRUST ========== */
-  .faq-list {
+.faq-list {
     max-width: 720px;
     margin: 40px auto;
-    padding: 0 24px;
-  }
+    padding: 50px 24px;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    border-radius: 28px;
+    border: 1px solid var(--border-color);
+}
   .faq-item {
     background: var(--bg-card);
     backdrop-filter: blur(4px);
@@ -1507,28 +1546,28 @@
         <!-- الصورة 2 -->
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://github.com/azroukarim/atlas/raw/refs/heads/main/PIC.avif" alt="Gallery Image 2">
+            <img src="https://placehold.co/400x250/1f2937/ef4444?text=Image+2" alt="Gallery Image 2">
             <div class="image-caption">Screenshot2</div>
           </div>
         </div>
         <!-- الصورة 3 -->
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://github.com/azroukarim/atlas/raw/refs/heads/main/PIC.avif" alt="Gallery Image 3">
+            <img src="https://placehold.co/400x250/1f2937/fbbf24?text=Image+3" alt="Gallery Image 3">
             <div class="image-caption">Screenshot3</div>
           </div>
         </div>
         <!-- الصورة 4 -->
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://github.com/azroukarim/atlas/raw/refs/heads/main/PIC.avif" alt="Gallery Image 4">
+            <img src="https://placehold.co/400x250/1f2937/10b981?text=Image+4" alt="Gallery Image 4">
             <div class="image-caption">Screenshot4</div>
           </div>
         </div>
         <!-- الصورة 5 -->
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://github.com/azroukarim/atlas/raw/refs/heads/main/PIC.avif" alt="Gallery Image 5">
+            <img src="https://placehold.co/400x250/1f2937/8b5cf6?text=Image+5" alt="Gallery Image 5">
             <div class="image-caption">Screenshot5</div>
           </div>
         </div>
