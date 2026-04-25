@@ -800,31 +800,34 @@
     overflow: visible;
   }
 
-  .image-swiper .swiper-slide {
+.image-swiper .swiper-slide {
     width: auto;
     transition: all 0.3s ease;
     overflow: visible;
     z-index: 1;
-  }
+    transform: scale(1);
+    opacity: 1;
+}
 
   .image-swiper .swiper-slide:hover {
     z-index: 9999 !important;
   }
 
-  .image-swiper .swiper-slide-active {
-    z-index: 100;
-  }
+.image-swiper .swiper-slide-active {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
 
 .image-swiper .swiper-slide:not(.swiper-slide-active) {
-    opacity: 0.7;
+    opacity: 1;
     transform: scale(1);
 }
 
-  .image-swiper .swiper-slide-active .image-card {
+.image-swiper .swiper-slide-active .image-card {
     transform: scale(1);
     border-color: var(--yellow);
     box-shadow: var(--shadow-glow-yellow);
-  }
+}
 
 .image-card {
     background: transparent;
@@ -1751,13 +1754,13 @@
 
 function initImageSwiper() {
     imageSwiper = new Swiper('.imageSwiper', {
-        slidesPerView: 1,      // ✅ صورة واحدة فقط في المنتصف
-        centeredSlides: true,  // ✅ توسيط الصورة
-        spaceBetween: 0,       // ✅ لا مسافة بين الصور
+        slidesPerView: 3,
+        centeredSlides: false,
+        spaceBetween: 15,
         loop: true,
         grabCursor: true,
         autoplay: {
-            delay: 2000,
+            delay: 2500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true
         },
@@ -1766,8 +1769,9 @@ function initImageSwiper() {
             clickable: true
         },
         breakpoints: {
-            640: { slidesPerView: 1, centeredSlides: true, spaceBetween: 0 },
-            1024: { slidesPerView: 1, centeredSlides: true, spaceBetween: 0 }
+            320: { slidesPerView: 1, spaceBetween: 10 },
+            640: { slidesPerView: 2, spaceBetween: 15 },
+            1024: { slidesPerView: 3, spaceBetween: 15 }
         }
     });
 }
