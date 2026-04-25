@@ -496,7 +496,7 @@
     background: linear-gradient(135deg, var(--red), var(--blue));
     color: white;
     border-color: transparent;
-    transform: scale(1.05);
+    transform: scale(1.3);
     box-shadow: 0 0 20px var(--red-glow);
   }
 
@@ -758,6 +758,82 @@
   .plan-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px var(--blue-glow);
+  }
+
+  /* ========== IMAGE SLIDER SECTION (بين الخطط وطرق الدفع) ========== */
+  .image-slider-section {
+    background: var(--bg-primary);
+    padding: 50px 24px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  .image-slider-container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .image-slider-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .image-slider-title h3 {
+    font-size: 20px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--red), var(--blue), var(--yellow));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .image-slider-title p {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 5px;
+  }
+  .image-swiper {
+    width: 100%;
+    padding: 10px 0 30px 0;
+  }
+  .image-swiper .swiper-slide {
+    width: auto;
+    opacity: 1;
+    transform: scale(1);
+  }
+.image-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    overflow: visible;
+}
+  .image-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--yellow);
+    box-shadow: var(--shadow-glow-yellow);
+  }
+  .image-card img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+  .image-card:hover img {
+    transform: scale(1.75);
+  }
+  .image-card .image-caption {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+  .image-swiper .swiper-pagination-bullet {
+    background: var(--border-color);
+  }
+  .image-swiper .swiper-pagination-bullet-active {
+    background: var(--yellow);
   }
 
   /* ========== PAYMENT SECTION ========== */
@@ -1238,6 +1314,7 @@
     #scrollTopBtn { bottom: 20px; right: 20px; width: 46px; height: 46px; font-size: 17px; }
     .compatibility-icons { gap: 15px; }
     .compatibility-item span:first-child { font-size: 22px; }
+    .image-card img { max-width: 280px; }
   }
   @media (max-width: 600px) {
     .trust-container { gap: 20px; }
@@ -1251,6 +1328,7 @@
     .plan-duration { font-size: 28px; }
     .plan-price { font-size: 24px; }
     .plan { padding: 20px; }
+    .image-card img { max-width: 100%; }
   }
 </style>
 </head>
@@ -1306,13 +1384,13 @@
     </div>
     <div class="channels-grid">
       <div class="channel-card"><div class="channel-card-title">📺 LIVE CHANNELS</div>
-        <ul class="channel-list"><li>4K UHD 3840P⭐</li><li>RELAX UHD 3840P⭐</li><li>SPORT ON AIR ⁸ᴷ ⭐</li><li>UK ULTIMATE</li><li>BEIN SPORT FULL⚽</li><li>TOD SPORT PPV ⚽</li><li>UEFA CHAMPIONS LEAGUE⚽</li><li>OSN PLATINUM</li><li>NETFLIX</li><li>And hundreds more...</li></ul>
+        <ul class="channel-list"><li>4K UHD 3840P⭐</li><li>RELAX UHD 3840P⭐</li><li>SPORT ON AIR ⁸ᴷ ⭐</li><li>UK ULTIMATE</li><li>HORSE RACING⭐</li><li>TENNIS⭐</li><li>GERMANY ULTIMATE</li><li>AUSTRIA</li><li>NETHERLAND ULTIMATE</li><li>Belgium</li><li>ITALY ULTIMATE</li><li>FRANCE ULTIMATE</li><li>SPAIN ULTIMATE</li><li>Portugal</li><li>Switzerland</li><li>Poland</li><li>GREECE ULTIMATE</li><li>CYPRUS ULTIMATE</li><li>SWEDEN ULTIMATE</li><li>DENMARK ULTIMATE</li><li>NORWAY ULTIMATE</li><li>FINLAND ULTIMATE</li><li>Special - SWEDEN ULTIMATE</li><li>Special - DENMARK ULTIMATE</li><li>Special - NORWAY ULTIMATE</li><li>Special - FINLAND ULTIMATE</li><li>ICELAND ULTIMATE</li><li>Hungary</li><li>Romania</li><li>KOSOVO/ALBANIA</li><li>Russian</li><li>UKRAINE</li><li>HEBREW</li><li>AUSTRALIA</li><li>NEW ZEALAND</li><li>MALTA</li><li>Czech Republic</li><li>EXYU 24/7</li><li>SERBIA</li><li>BOSNIA</li><li>CROATIA</li><li>MACEDONIA</li><li>SLOVENIA</li><li>MONTENEGRO</li><li>BULGARIA</li><li>Estonia</li><li>TURKISH</li><li>KURDISH</li><li>IRAN</li><li>Afghanistan</li><li>AFRICA ULTIMATE</li><li>PAKISTAN</li><li>WORLD CRICKET⭐</li><li>INDIA</li><li>CANADA ULTIMATE</li><li>USA ULTIMATE</li><li>SINGAPORE</li><li>BRAZIL ULTIMATE</li><li>SURINAME</li><li>MEXICO ULTIMATE</li><li>LATINO</li><li>CARIBBEAN</li><li>JAPAN⭐</li><li>TAIWAN</li><li>CAMEROONIAN</li><li>SAINT LUCIA⭐</li><li>PHILIPINES</li><li>Georgia</li><li>Azerbaijan</li><li>UZBEKISTAN</li><li>Armenia</li><li>VENEZUELA</li><li>HONGKONG⭐</li><li>CHINA</li><li>Vietnam</li><li>Malaysia</li><li>INDONESIA</li><li>SOUTH KOREA</li><li>THAILAND</li><li>KAZACHSTAN</li><li>LITHUANIA</li><li>RADIO</li><li>RELAX 4K⭐</li><li>✯☾Ramadan Brings Us Together☽✯</li><li>ARABIC UHD 3840P⭐</li><li>ALWAN ENTERTAINMENT</li><li>WATCH IT ⭐</li><li>STARZ PLAY PPV⭐</li><li>JAWWY⭐</li><li>ITUNES⭐</li><li>BEIN SPORT FULL⚽</li><li>TOD SPORT PPV ⚽</li><li>BEIN SPORT 8K⚽</li><li>BEIN SPORT SS⚽</li><li>BEIN SPORT F⚽</li><li>BEIN SPORT BE⚽</li><li>BEIN SPORT ◉⚽</li><li>BEIN SPORT UHD⚽</li><li>BEIN SPORT ᴺᴹ⚽</li><li>BEIN SPORT OFF⚽</li><li>BEIN SPORT SA⚽</li><li>UEFA CHAMPIONS LEAGUE⚽</li><li>1001 ◉⚽</li><li>ALFAJER SPORT ⚽</li><li>ALFAJER SPORT BE ⚽</li><li>ALWAN SPORT F⚽</li><li>POST SPORT⚽</li><li>WATER SPORT ᴮᴱ</li><li>SHASHA SPORT ᴮᴱ ⚽</li><li>SHASHA SPORT F ⚽</li><li>ARABIC SPORT FTA⚽</li><li>StarzPlay / AD SPORTS 4K ⚽</li><li>StarzPlay / AD SPORTS M ⚽</li><li>StarzPlay / AD SPORTS BE ⚽</li><li>StarzPlay / AD SPORTS F ⚽</li><li>THMANYAH 8K⚽</li><li>THMANYAH F⚽</li><li>THMANYAH BE⚽</li><li>THMANYAH ◉⚽</li><li>THMANYAH SA⚽</li><li>THMANYAH ᴺᴹ⚽</li><li>SHAHID PPV ⚽</li><li>SHAHID PPV F ⚽</li><li>SHAHID BUNDESLIGA ᴮᴱ ⚽</li><li>SHAHID BUNDESLIGA ◉ ⚽</li><li>SHAHID BUNDESLIGA ᴺᴹ⚽</li><li>AL-KASS BE⚽</li><li>AL-KASS ◉⚽</li><li>SPORTS PPV ᴺᴹ ⚽</li><li>DAZN MENA PPV ⭐</li><li>STC EXCLUSIVE ⭐</li><li>MBC</li><li>LEBANON</li><li>SYRIA</li><li>MOROCCO</li><li>OSN PLATINUM</li><li>OSN F</li><li>OSN BE</li><li>GOBX PLATINUM</li><li>GOBX BE</li><li>MYHD F</li><li>ROTANA & ART</li><li>EGYPT</li><li>NEWS</li><li>KIDS</li><li>CINE 24-7 ᴹᵁᴸᵀᴵ⁻ᴬᵁᴰᴵᴼ</li><li>SHAHID VIP</li><li>SHAHID CINEMA</li><li>WEYYAK</li><li>SHOOF DRAMA</li><li>SHOOF COMEDY</li><li>ON DEMAND</li><li>NETFLIX GERMANY</li><li>NETFLIX</li><li>BOX OFFICE</li><li>WORLD OF COOKING</li><li>️ACTORS ⭐</li><li>️TOD ⭐</li><li>️HBO ⭐</li><li>PRIME VIDEO ▶⭐</li><li>️WATCH BOX ⭐</li><li>️HULU ⭐</li><li>️VIVO ⭐</li><li>️POWER ⭐</li><li>️MAJESTIC⭐</li><li>BEIN OD PLATINUM</li><li>BEIN ENTERTAINMENT ᵀᴼᴰ</li><li>BEIN ENTERTAINMENT ᴺᴹ</li><li>BEIN ENTERTAINMENT SS</li><li>BEIN ENTERTAINMENT 4K</li><li>BEIN ENTERTAINMENT F</li><li>BEIN ENTERTAINMENT ᴮᴱ</li><li>ALRABIAA ᴺᴹ</li><li>ZINA ᴺᴹ</li><li>ONC ᴺᴹ</li><li>24/7 ᴺᴹ</li><li>EMIRATES</li><li>IRAQ</li><li>AL-MAJD</li><li>AL-MAJD BE</li><li>SAUDI</li><li>KUWAIT</li><li>QATAR</li><li>OMAN</li><li>BAHRAIN</li><li>JORDAN</li><li>PALESTINE</li><li>TUNISIA</li><li>ALGERIA</li><li>YEMEN</li><li>LIBYA</li><li>SUDAN</li><li>ANGHAMI</li><li>MUSIC</li><li>DISCOVERY+ ARABIC RAW</li><li>DOCUMENTARY</li><li>QURAN HD</li><li>ISLAMIC</li><li>ISLAMIC NASHEEDS</li><li>MUSLIM TV</li><li>CHRISTIAN</li><li>ARABIC EXCLUSIVE LQ⭐</li><li>SPORT EXCLUSIVE LQ⭐</li><li>ARABIC +6H USA</li></ul>
       </div>
       <div class="channel-card"><div class="channel-card-title">🎬 MOVIES VOD</div>
-        <ul class="channel-list"><li>VOD - TOP MOVIES DOLBY AUDIO 4K</li><li>VOD - NETFLIX DOLBY AUDIO 4K</li><li>VOD - DISNEY+ MOVIES</li><li>VOD - HBO MAX 4K</li><li>VOD - AMAZON PRIME</li><li>VOD - APPLE TV+</li><li>VOD - FRANCE 4K HDR DOLBY</li><li>And thousands more...</li></ul>
+        <ul class="channel-list"><li>VOD - TOP MOVIES DOLBY AUDIO 4K 3840p</li><li>VOD - TOP MOVIES BLURAY (MULTI-SUBS)⭐</li><li>VOD - ASIA MOVIES (MULTI-SUBS)</li><li>VOD - NETFLIX DOLBY AUDIO 4K 3840P⭐</li><li>VOD - NETFLIX DOLBY AUDIO ⭐</li><li>VOD - NETFLIX ⭐</li><li>VOD - AMAZON ⭐</li><li>VOD - DISNEY+ MOVIES MENA⭐</li><li>VOD - DISNEY+ SERIES MENA⭐</li><li>VOD - DISCOVERY+ SERIES MENA⭐</li><li>VOD - DISNEY+ ⭐</li><li>VOD - APPLE+ ⭐</li><li>VOD - DISCOVERY+⭐</li><li>VOD - HBO MAX 4K 3840P</li><li>VOD - HBO MAX</li><li>VOD - VIAPLAY⭐</li><li>VOD - SKY⭐</li><li>VOD - SHOWTIME⭐</li><li>VOD - DREAMWORKS⭐</li><li>VOD - UNIVERSAL⭐</li><li>VOD - PARAMOUNT+⭐</li><li>VOD - PEACOCK⭐</li><li>VOD - NICKELODEON⭐</li><li>VOD - CRUNCHYROLL⭐</li><li>VOD - MARVEL MOVIES⭐</li><li>VOD - MARVEL SERIES⭐</li><li>VOD - OSN+ SERIES 4K 3840P⭐</li><li>VOD - ASIA SERIES (MULTI-SUBS)⭐</li><li>VOD - ENGLISH</li><li>VOD - CHRISTIAN MOVIES</li><li>VOD - SOCCER</li><li>VOD - GERMANY</li><li>VOD - GERMANY FUSSBALL</li><li>VOD - ITALY</li><li>VOD - NETHERLANDS</li><li>VOD - BELGIUM (DUTCH)⭐</li><li>VOD - BELGIUM (FRENCH)⭐</li><li>VOD - PORTUGAL/BRAZIL</li><li>VOD - SPAIN</li><li>VOD - LATINO ESPAÑA⭐️</li><li>VOD - AFRIQUE</li><li>VOD - FRANCE 4K HDR DOLBY</li><li>VOD - FRANCE</li><li>VOD - QUÉBEC FRANCE</li><li>VOD - FRANCE SPORTS</li><li>VOD - POLAND</li><li>VOD - GREECE</li><li>VOD - GREEK</li><li>VOD - HEBREW⭐</li><li>VOD - NORDIC 4K 3840P DOLBY AUDIO</li><li>VOD - NORDIC</li><li>VOD - SWEDEN</li><li>VOD - DENMARK</li><li>VOD - NORWAY</li><li>VOD - FINLAND</li><li>VOD - ICELAND 4K 3840P DOLBY AUDIO</li><li>VOD - ICELAND</li><li>VOD - Russian</li><li>VOD - Hungary</li><li>VOD - Malta</li><li>VOD - BULGARIA</li><li>VOD - Romania</li><li>VOD - ALBANIA</li><li>VOD - EX-YU</li><li>VOD - KURDISH</li><li>VOD - TURKISH</li><li>VOD - IRAN</li><li>VOD - SOMALIA</li><li>VOD - INDIA</li><li>VOD - BENGALI</li><li>VOD - PAKISTAN</li><li>VOD - Brazil</li><li>VOD - CHINA</li><li>VOD - PHILIPINES</li><li>VOD - PHILIPINES RATED R</li><li>VOD - JAPANESE</li><li>VOD - OSN+ MOVIES 4K 3840P⭐</li><li>VOD - 4K DOLBY AUDIO ARABIC SERIES</li><li>VOD - ARABIC SERIES ULTRA HD</li><li>VOD - SHAHID SERIES ULTRA HD</li><li>VOD - TOD SERIES ULTRA HD</li><li>VOD - TURKISH SERIES ULTRA HD</li><li>VOD - ARABIC PROGRAMS ULTRA HD</li><li>VOD - DOLBY AUDIO ARABIC SERIES</li><li>VOD - NOW SHOWING ARABIC</li><li>VOD - NOW SHOWING TURKISH</li><li>VOD - NOW SHOWING FOREIGN</li><li>VOD - NOW SHOWING ASIAN</li><li>VOD - NOW SHOWING INDIAN</li><li>VOD - NOW SHOWING ANIME</li><li>VOD - NOW SHOWING PROGRAMS</li><li>VOD - RAMADAN ULTRA HD</li></ul>
       </div>
       <div class="channel-card"><div class="channel-card-title">📺 SERIES VOD</div>
-        <ul class="channel-list"><li>VOD - SHAHID ORIGINAL SERIES</li><li>VOD - WATCH IT ORIGINAL SERIES</li><li>VOD - TOD ORIGINAL SERIES</li><li>VOD - TURKISH SERIES</li><li>VOD - FOREIGN SERIES</li><li>VOD - ANIME</li><li>VOD - RAMADAN SERIES</li><li>And hundreds more...</li></ul>
+        <ul class="channel-list"><li>VOD - RAMADAN SYRIAN LEBANESE SERIES</li><li>VOD - RAMADAN EGYPTIAN SERIES</li><li>VOD - RAMADAN GULF IRAQI SERIES</li><li>VOD - RAMADAN MOROCCAN SERIES</li><li>VOD - RAMADAN TUNISIAN ALGERIAN LIBYAN</li><li>VOD - RAMADAN YEMENI SERIES</li><li>VOD - RAMADAN JORDANIAN PALESTINIAN</li><li>VOD - RAMADAN ALGERIAN SERIES</li><li>VOD - RAMADAN LIBYAN SERIES</li><li>VOD - RAMADAN KIDS</li><li>VOD - RAMADAN PROGRAMS</li><li>VOD - SHORT ARABIC SERIES</li><li>VOD - SHAHID ORIGINAL SERIES</li><li>VOD - WATCH IT ORIGINAL SERIES</li><li>VOD - TOD ORIGINAL SERIES</li><li>VOD - VIEW ORIGINAL SERIES</li><li>VOD - LEVANTINE SERIES</li><li>VOD - SYRIAN LEBANESE SERIES</li><li>VOD - EGYPTIAN SERIES</li><li>VOD - GULF SERIES</li><li>VOD - IRAQI SERIES</li><li>VOD - MOROCCAN SERIES</li><li>VOD - TUNISIAN SERIES</li><li>VOD - ALGERIAN LIBYAN SERIES</li><li>VOD - YEMENI SERIES</li><li>VOD - JORDANIAN PALESTINIAN SERIES</li><li>VOD - BEDOUIN SERIES</li><li>VOD - CHRISTIAN RITUALS</li><li>VOD - TURKISH SERIES (SUBTITLED)</li><li>VOD - TURKISH SERIES (DUBBED)</li><li>VOD - RUSSIAN SERIES (SUBTITLED)</li><li>VOD - DUBBED SERIES</li><li>VOD - FOREIGN SERIES ULTRA HD</li><li>VOD - FOREIGN SERIES</li><li>VOD - SHORT FOREIGN SERIES DUBBED</li><li>VOD - SHORT FOREIGN SERIES SUBTITLED</li><li>VOD - GERMAN SERIES</li><li>VOD - ASIAN SERIES SUBTITLED</li><li>VOD - ASIAN SERIES DUBBED</li><li>VOD - SHORT ASIAN SERIES SUBTITLED</li><li>VOD - SHORT ASIAN SERIES DUBBED</li><li>VOD - INDIAN SERIES DUBBED</li><li>VOD - INDIAN SERIES SUBTITLED</li><li>VOD - DISCOVERY+ DUBBED</li><li>VOD - AL MASHHAD PROGRAMS</li><li>VOD - NATIONAL GEOGRAPHIC SERIES</li><li>VOD - DOCUMENTARY SERIES SUBTITLED</li><li>VOD - DOCUMENTARY SERIES DUBBED</li><li>VOD - MOROCCAN DOCUMENTARY SERIES</li><li>VOD - ANIME ULTRA HD</li><li>VOD - ANIME</li><li>VOD - CHINESE ANIME</li><li>VOD - SHAHID KIDS SERIES</li><li>VOD - TOD KIDS SERIES</li><li>VOD - KIDS SERIES</li><li>VOD - ISLAMIC KIDS SERIES</li><li>VOD - OLD CARTOON SERIES</li><li>VOD - MOROCCAN KIDS SERIES</li><li>VOD - TUNISIAN KIDS SERIES</li><li>VOD - ADULT CARTOON SERIES</li><li>VOD - THEATER PERFORMANCES</li><li>VOD - RELIGIOUS PROGRAMS</li><li>VOD - OLD ARABIC SERIES</li><li>VOD - LATEST MATCHES</li><li>VOD - WRESTLING</li><li>VOD - FIFA+ SERIES</li><li>VOD - VARIETY PROGRAMS</li><li>VOD - AL JAZEERA 360</li><li>VOD - PODCASTS</li><li>VOD - ISLAMIC SERIES</li><li>VOD - STAND-UP COMEDY</li><li>VOD - 4K DOLBY AUDIO ARABIC MOVIES</li><li>VOD - ARABIC MOVIES ULTRA HD</li><li>VOD - THEATER PERFORMANCES ULTRA HD</li><li>VOD - DOLBY AUDIO ARABIC MOVIES</li><li>VOD - ARAB STARS MOVIES</li><li>VOD - ADEL IMAM MOVIES</li><li>VOD - AHMED HELMY MOVIES</li><li>VOD - AHMED EZZ MOVIES</li><li>VOD - KARIM ABDULAZIZ MOVIES</li><li>VOD - AHMED EL SAKA MOVIES</li><li>VOD - MOHAMED HENIDI MOVIES</li><li>VOD - HANY RAMZY MOVIES</li><li>VOD - DUREID LAHHAM MOVIES</li></ul>
       </div>
     </div>
   </div>
@@ -1410,6 +1488,58 @@
   </div>
 </div>
 
+<!-- ========== IMAGE SLIDER SECTION (بين الخطط وطرق الدفع) ========== -->
+<div class="image-slider-section">
+  <div class="image-slider-container">
+    <div class="image-slider-title">
+      <h3>📸 Our Gallery</h3>
+      <p>Check out our services and features</p>
+    </div>
+    <div class="swiper imageSwiper">
+      <div class="swiper-wrapper" id="imageSliderWrapper">
+        <!-- الصورة 1 -->
+        <div class="swiper-slide">
+          <div class="image-card">
+            <img src="https://github.com/azroukarim/atlas/raw/refs/heads/main/PIC.avif" alt="Gallery Image 1">
+            <div class="image-caption">Screenshot1</div>
+          </div>
+        </div>
+        <!-- الصورة 2 -->
+        <div class="swiper-slide">
+          <div class="image-card">
+            <img src="https://placehold.co/400x250/1f2937/ef4444?text=Image+2" alt="Gallery Image 2">
+            <div class="image-caption">Screenshot2</div>
+          </div>
+        </div>
+        <!-- الصورة 3 -->
+        <div class="swiper-slide">
+          <div class="image-card">
+            <img src="https://placehold.co/400x250/1f2937/fbbf24?text=Image+3" alt="Gallery Image 3">
+            <div class="image-caption">Screenshot3</div>
+          </div>
+        </div>
+        <!-- الصورة 4 -->
+        <div class="swiper-slide">
+          <div class="image-card">
+            <img src="https://placehold.co/400x250/1f2937/10b981?text=Image+4" alt="Gallery Image 4">
+            <div class="image-caption">Screenshot4</div>
+          </div>
+        </div>
+        <!-- الصورة 5 -->
+        <div class="swiper-slide">
+          <div class="image-card">
+            <img src="https://placehold.co/400x250/1f2937/8b5cf6?text=Image+5" alt="Gallery Image 5">
+            <div class="image-caption">Screenshot5</div>
+          </div>
+        </div>
+      </div>
+      <!-- تم إزالة أزرار الأسهم -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PAYMENT SECTION ========== -->
 <div class="payment-section" id="order">
   <div class="payment-inner">
     <div class="section-header">
@@ -1512,6 +1642,7 @@
 
   let allItems = [];
   let swiper = null;
+  let imageSwiper = null;
 
   const leagueImages = {
     "IBO PLAYER": "https://iboplayer.com/assets/ibo-player-tZ0LjXtY.webp",
@@ -1590,6 +1721,28 @@
     });
   }
 
+  function initImageSwiper() {
+    imageSwiper = new Swiper('.imageSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      breakpoints: {
+        640: { slidesPerView: 2, spaceBetween: 20 },
+        1024: { slidesPerView: 3, spaceBetween: 25 }
+      }
+    });
+  }
+
   function sendPaymentRequest(method, methodName) { const name = document.getElementById('inp-name').value.trim(); const phone = document.getElementById('inp-phone').value.trim(); const email = document.getElementById('inp-email').value.trim(); const plan = document.getElementById('inp-plan').value; if (!name || !phone || !email || !plan) { showToast('⚠️ Please fill all fields'); return; } const sel = document.getElementById('inp-payment'); for (let o of sel.options) { if (o.text === method) { sel.value = o.text; break; } } const msg = `━━━━━━━━━━━━━━━━━━━━━━━━━━━%0A💰 *NEW PAYMENT REQUEST - STREAMZONE* 💰%0A━━━━━━━━━━━━━━━━━━━━━━━━━━━%0A%0A👤 *Customer Name:* ${name}%0A📞 *Phone:* ${phone}%0A📧 *Email:* ${email}%0A📦 *Plan:* ${plan}%0A💳 *Payment Method:* ${methodName}%0A%0A━━━━━━━━━━━━━━━━━━━━━━━━━━━%0A📌 *Action Required:*%0A━━━━━━━━━━━━━━━━━━━━━━━━━━━%0A%0A✅ Please send the customer the payment details for ${method}%0A✅ Send bank account / CashPlus / CashExpress information%0A✅ Ask for payment receipt confirmation%0A✅ After confirmation, send IPTV login details%0A%0A━━━━━━━━━━━━━━━━━━━━━━━━━━━%0A⏰ Request sent at: ${new Date().toLocaleString()}%0A━━━━━━━━━━━━━━━━━━━━━━━━━━━`; window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`, '_blank'); showToast(`📱 Opening WhatsApp with ${method} payment request`); }
   function openOrderModal(planName, price) { selectedPlan = { name: planName, price: price }; document.getElementById('modalPlanInfo').innerHTML = `📦 ${planName} — $${price} USD`; document.getElementById('orderModal').style.display = 'flex'; document.getElementById('modalName').value = ''; document.getElementById('modalPhone').value = ''; document.getElementById('modalEmail').value = ''; }
   function openTrialModal() { document.getElementById('trialModal').style.display = 'flex'; }
@@ -1603,7 +1756,7 @@
   function showToast(msg) { const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 3000); }
   window.onclick = function(event) { if (event.target.classList.contains('modal-overlay')) { event.target.style.display = 'none'; } }
 
-  async function init() { loadLeagues(); await loadAllContent(); initSwiper(); document.querySelectorAll('.filter-tab').forEach(tab => tab.addEventListener('click', () => { document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active')); tab.classList.add('active'); filterItems(tab.dataset.filter); })); setLanguage('en'); }
+  async function init() { loadLeagues(); await loadAllContent(); initSwiper(); initImageSwiper(); document.querySelectorAll('.filter-tab').forEach(tab => tab.addEventListener('click', () => { document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active')); tab.classList.add('active'); filterItems(tab.dataset.filter); })); setLanguage('en'); }
   init();
 </script>
 </body>
