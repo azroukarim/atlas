@@ -752,24 +752,17 @@
   }
 
   /* ========== IMAGE SLIDER SECTION - الحل النهائي ========== */
-  .image-slider-section {
+.image-slider-section {
     background: url('https://wallpapercave.com/wp/wp3131729.jpg') center center/cover no-repeat fixed;
     padding: 50px 24px;
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
+    border-top: none;
+    border-bottom: none;
     position: relative;
-  }
+}
 
-  .image-slider-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1;
-  }
+.image-slider-section::before {
+    display: none;
+}
 
   .image-slider-section > * {
     position: relative;
@@ -822,10 +815,10 @@
     z-index: 100;
   }
 
-  .image-swiper .swiper-slide:not(.swiper-slide-active) {
-    opacity: 0.6;
-    transform: scale(0.85);
-  }
+.image-swiper .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0.7;
+    transform: scale(1);
+}
 
   .image-swiper .swiper-slide-active .image-card {
     transform: scale(1);
@@ -833,19 +826,19 @@
     box-shadow: var(--shadow-glow-yellow);
   }
 
-  .image-card {
-    background: var(--bg-card);
-    backdrop-filter: blur(8px);
-    border-radius: 20px;
-    padding: 15px;
+.image-card {
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 16px;
+    padding: 0;
     text-align: center;
-    border: 1px solid var(--border-color);
+    border: none;
     transition: all 0.3s ease;
     cursor: pointer;
     overflow: visible;
     position: relative;
     z-index: 1;
-  }
+}
 
   .image-card:hover {
     transform: translateY(-5px);
@@ -853,14 +846,14 @@
     box-shadow: var(--shadow-glow-yellow);
   }
 
-  .image-card img {
+.image-card img {
     width: 100%;
-    max-width: 380px;
+    max-width: 100%;
     height: auto;
     border-radius: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     transition: transform 0.4s cubic-bezier(0.2, 0.95, 0.4, 1.1);
-  }
+}
 
   .image-card:hover img {
     transform: scale(1.8);
@@ -1543,31 +1536,31 @@
       <div class="swiper-wrapper" id="imageSliderWrapper">
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://github.com/azroukarim/atlas/raw/refs/heads/main/PIC.avif" alt="Gallery Image 1">
+            <img src="https://raw.githubusercontent.com/azroukarim/atlas/refs/heads/main/PIC%20(2).jpg" alt="Gallery Image 1">
             <div class="image-caption">Screenshot1</div>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://placehold.co/400x250/1f2937/ef4444?text=Image+2" alt="Gallery Image 2">
+            <img src="https://raw.githubusercontent.com/azroukarim/atlas/refs/heads/main/PIC%20(5).jpg" alt="Gallery Image 2">
             <div class="image-caption">Screenshot2</div>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://placehold.co/400x250/1f2937/fbbf24?text=Image+3" alt="Gallery Image 3">
+            <img src="https://raw.githubusercontent.com/azroukarim/atlas/refs/heads/main/PIC%20(1).jpg" alt="Gallery Image 3">
             <div class="image-caption">Screenshot3</div>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://placehold.co/400x250/1f2937/10b981?text=Image+4" alt="Gallery Image 4">
+            <img src="https://raw.githubusercontent.com/azroukarim/atlas/refs/heads/main/PIC%20(3).jpg" alt="Gallery Image 4">
             <div class="image-caption">Screenshot4</div>
           </div>
         </div>
         <div class="swiper-slide">
           <div class="image-card">
-            <img src="https://placehold.co/400x250/1f2937/8b5cf6?text=Image+5" alt="Gallery Image 5">
+            <img src="https://raw.githubusercontent.com/azroukarim/atlas/refs/heads/main/PIC%20(4).jpg" alt="Gallery Image 5">
             <div class="image-caption">Screenshot5</div>
           </div>
         </div>
